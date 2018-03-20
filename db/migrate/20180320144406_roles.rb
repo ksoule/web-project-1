@@ -1,5 +1,7 @@
 class Roles < ActiveRecord::Migration[5.1]
   def change
-    t.string :character_name
+    create_table :roles do |t|
+      t.string :character_name
+    end
   end
 end

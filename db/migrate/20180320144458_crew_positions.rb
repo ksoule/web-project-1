@@ -1,5 +1,7 @@
 class CrewPositions < ActiveRecord::Migration[5.1]
   def change
-    t.string :position_title
+    create_table :crew_positions do |t|
+      t.string :position_title
+    end
   end
 end
