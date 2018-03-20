@@ -1,0 +1,35 @@
+Tables:
+  Actors (name and stats)
+    Have many movies through roles
+    have many roles
+
+  Movies (title and stats)
+    have many roles
+    have many crew through crew positions
+    have many actors through roles
+    have many genres
+    has many reviews
+
+  Genres (name and description?)
+
+  Movie-genres join table between movies and genres
+
+  roles: movie-actors join table W/ character name
+
+  Crew positions: movie-crew join table with position name
+    includes production credits
+
+  Crew members
+    have many movies through crew positions
+
+  Reviews (review text)
+
+
+PAGES
+  Main:
+    display most popular movies
+
+  Movie:
+    list of actors W/ role
+    list of crew with position
+
