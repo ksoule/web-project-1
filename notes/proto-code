@@ -33,3 +33,37 @@ PAGES
     list of actors W/ role
     list of crew with position
 
+get '/noun' do
+  @lower_case = Upper_case.all
+  erb :'noun/index'
+end
+
+get '/noun/new' do
+  erb :"/noun/new"
+end
+
+post '/noun' do
+  @lower_case = Upper_case.create!(params)
+  redirect "/noun/#{@lower_case.id}/edit"
+end
+
+get '/noun/:id' do
+  @lower_case = Upper_case.find(params[:id])
+  erb :"noun/show"
+end
+
+get '/noun/:id/edit' do
+  @lower_case = Upper_case.find(params[:id])
+  erb :"noun/edit"
+end
+
+put '/noun/:id' do
+  @lower_case = Upper_case.find(params[:id])
+  redirect "/noun/#{@lower_case.id}"
+end
+
+delete '/noun/:id' do
+  @lower_case = Upper_case.find(params[:id])
+  @lower_case.delete
+  redirect '/noun'
+end

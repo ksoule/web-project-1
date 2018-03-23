@@ -20,7 +20,7 @@ external APIs and Libraries
 
 
 Getting Started:
-Clone to local machine: git clone
+Clone to local machine: git clone https://github.com/ksoule/web-project-1.git
 
 Install dependencies: bundle
 
